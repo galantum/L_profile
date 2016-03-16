@@ -35,6 +35,11 @@
                             </li>
                         </ul>
                     {{ Form::close() }}
+                    @if ($errors->any())
+					    <ul>
+					        {{ implode('', $errors->all(':message')) }}
+					    </ul>
+					@endif
                 </div>
             </div>
         </div>
