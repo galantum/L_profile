@@ -11,6 +11,9 @@ use App\User;
 use View;
 //import Redirect
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Input;
+
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
