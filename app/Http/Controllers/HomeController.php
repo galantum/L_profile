@@ -60,5 +60,9 @@ class HomeController extends Controller
             $user->update($input);
             return Redirect::route('home', $id);
         }
+        return Redirect::route('edit', $id)
+                    ->withInput()
+                    ->withErrors($validation)
+                    ->with('message', 'There were validation errors.');
     }
 }
