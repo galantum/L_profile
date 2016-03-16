@@ -35,4 +35,5 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/home/edit/{id}', 'HomeController@edit')->name('edit');
+    Route::put('/home/update/{id}', 'HomeController@update')->name('update');
 });
