@@ -11,7 +11,7 @@
                     You are logged in!
                 </div> -->
                 <div class="panel-body">
-                    {{ Form::open() }}
+                    {{ Form::model($user, array('method' => 'put', 'route' => array('update', $user->id))) }}
                         <ul>
                             <li>
                                 {{ Form::label('name', 'Name:') }}
