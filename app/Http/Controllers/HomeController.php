@@ -53,5 +53,12 @@ class HomeController extends Controller
             'email' => 'required|email|max:255',
             'password' => 'required|confirmed|min:6',
         ]);
+
+        if ($validation->passes())
+        {
+            $user = User::find($id);
+            $user->update($input);
+            return Redirect::route('home', $id);
+        }
     }
 }
