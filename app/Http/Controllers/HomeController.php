@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 //import User model
 use App\User;
+//import View
+use View;
+//import Redirect
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
