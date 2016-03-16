@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
+//import User model
+use App\User;
+
 class HomeController extends Controller
 {
     /**
@@ -29,6 +32,7 @@ class HomeController extends Controller
 
     public function edit($id){
         $user= User::find($id);
+
     }
 
     public function update($id){
