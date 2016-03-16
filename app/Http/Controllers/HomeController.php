@@ -33,6 +33,12 @@ class HomeController extends Controller
     public function edit($id){
         $user= User::find($id);
 
+        if (is_null($user))
+        {
+            return Redirect::route('home');
+        }
+        return View::make('edit', compact('user'));
+
     }
 
     public function update($id){
