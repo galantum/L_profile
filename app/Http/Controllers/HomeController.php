@@ -28,10 +28,10 @@ class HomeController extends Controller
     }
 
     public function edit($id){
-
+        $user= User::find($id);
     }
 
     public function update($id){
-        
+
     }
 }
