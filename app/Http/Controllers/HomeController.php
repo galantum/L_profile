@@ -46,6 +46,6 @@ class HomeController extends Controller
     }
 
     public function update($id){
-
+        $input = Input::all();
     }
 }
