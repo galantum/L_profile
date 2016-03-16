@@ -11,8 +11,9 @@ use App\User;
 use View;
 //import Redirect
 use Illuminate\Support\Facades\Redirect;
+//import Input
 use Illuminate\Support\Facades\Input;
-
+//import Validator
 use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
@@ -60,7 +61,11 @@ class HomeController extends Controller
         if ($validation->passes())
         {
             $user = User::find($id);
-            $user->update($input);
+            $user->update([
+                'name' => $input['name'],
+                'email' => $input['email'],
+                'password' => bcrypt($input['password']),
+            ]);
             return Redirect::route('home', $id);
         }
         return Redirect::route('edit', $id)
