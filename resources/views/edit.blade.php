@@ -26,6 +26,10 @@
                                 {{ Form::password('password') }}
                             </li>
                             <li>
+                                {{ Form::label('password_confirmation', 'Confirm Password:') }}
+                                {{ Form::password('password_confirmation') }}
+                            </li>
+                            <li>
                                 {{ Form::submit('Update', array('class' => 'btn btn-info')) }}
                                 {{ link_to_route('home', 'Cancel', $user->id, array('class' => 'btn btn-info')) }}
                             </li>
