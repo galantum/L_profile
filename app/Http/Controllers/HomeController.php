@@ -47,5 +47,11 @@ class HomeController extends Controller
 
     public function update($id){
         $input = Input::all();
+
+        $validation = Validator::make($input, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255',
+            'password' => 'required|confirmed|min:6',
+        ]);
     }
 }
