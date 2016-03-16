@@ -27,6 +27,7 @@
                             </li>
                             <li>
                                 {{ Form::submit('Update', array('class' => 'btn btn-info')) }}
+                                {{ link_to_route('home', 'Cancel', $user->id, array('class' => 'btn btn-info')) }}
                             </li>
                         </ul>
                     {{ Form::close() }}
