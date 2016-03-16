@@ -23,7 +23,7 @@
                             </li>
                             <li>
                                 {{ Form::label('password', 'Password:') }}
-                                {{ Form::text('password') }}
+                                {{ Form::password('password') }}
                             </li>
                             <li>
                                 {{ Form::submit('Update', array('class' => 'btn btn-info')) }}
